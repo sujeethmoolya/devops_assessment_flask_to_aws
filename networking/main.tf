@@ -48,3 +48,32 @@ resource "aws_subnet" "dev_proj_1_private_subnets" {
     Name = "dev-proj-private-subnet-${count.index + 1}"
   }
 }
+
+# Setup Internet Gateway
+resource "aws_internet_gateway" "dev_proj_1_public_internet_gateway" {
+  vpc_id = aws_vpc.dev_proj_1_vpc_eu_central_1.id
+  tags = {
+    Name = "dev-proj-1-igw"
+  }
+}
+
+# Public Route Table
+resource "aws_route_table" "dev_proj_1_public_route_table" {
+  vpc_id = aws_vpc.dev_proj_1_vpc_eu_central_1.id
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.dev_proj_1_public_internet_gateway.id
+  }
+  tags = {
+    Name = "dev-proj-1-public-rt"
+  }
+}
+
+# Private Route Table
+resource "aws_route_table" "dev_proj_1_private_subnets" {
+  vpc_id = aws_vpc.dev_proj_1_vpc_eu_central_1.id
+  #depends_on = [aws_nat_gateway.nat_gateway]
+  tags = {
+    Name = "dev-proj-1-private-rt"
+  }
+}
