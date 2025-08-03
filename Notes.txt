@@ -1,0 +1,18 @@
+Tools Used
+    1. Terraform - IaC
+    2. Jenkins - CI/CD Pipeline
+    3. AWS - Cloud
+
+Web Application
+    1. Rest end points
+    2. Database - RDS My SQL
+    3. Python flash application
+
+AWS Components
+    1. Domain
+    2. EC2
+    3. Relational Database - MySQL
+    4. Route 53
+    5. VPC, Subnet, Internet Gateway, ROute tables, ALB
+
+
