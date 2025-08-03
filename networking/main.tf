@@ -55,6 +55,7 @@ resource "aws_internet_gateway" "dev_proj_1_public_internet_gateway" {
   tags = {
     Name = "dev-proj-1-igw"
   }
+
 }
 
 # Public Route Table
@@ -76,4 +77,5 @@ resource "aws_route_table" "dev_proj_1_private_subnets" {
   tags = {
     Name = "dev-proj-1-private-rt"
   }
+
 }
