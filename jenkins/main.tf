@@ -9,6 +9,7 @@ variable "user_data_install_jenkins" {}
 
 output "ssh_connection_string_for_ec2" {
   value = format("%s%s", "ssh -i C:/Users/smart/.ssh/aws_ec2_terraform ubuntu@", aws_instance.jenkins_ec2_instance_ip.public_ip)
+  value = format("%s%s", "ssh -i C:\\Users\\smart\\.ssh\\jenkins_demo ubuntu@", aws_instance.jenkins_ec2_instance_ip.public_ip)
 }
 
 output "jenkins_ec2_instance_ip" {
@@ -25,7 +26,7 @@ resource "aws_instance" "jenkins_ec2_instance_ip" {
   tags = {
     Name = var.tag_name
   }
-  key_name                    = "aws_ec2_terraform"
+  key_name                    = "jenkins_demo"
   subnet_id                   = var.subnet_id
   vpc_security_group_ids      = var.sg_for_jenkins
   associate_public_ip_address = var.enable_public_ip_address
