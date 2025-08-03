@@ -28,6 +28,7 @@ variable "eu_availability_zone" {
   description = "Availability Zones"
 }
 
+
 variable "public_key" {
   type        = string
   description = "DevOps Project 1 Public key for EC2 instance"
