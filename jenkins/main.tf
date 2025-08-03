@@ -8,6 +8,7 @@ variable "enable_public_ip_address" {}
 variable "user_data_install_jenkins" {}
 
 output "ssh_connection_string_for_ec2" {
+  value = format("%s%s", "ssh -i C:/Users/smart/.ssh/aws_ec2_terraform ubuntu@", aws_instance.jenkins_ec2_instance_ip.public_ip)
   value = format("%s%s", "ssh -i C:\\Users\\smart\\.ssh\\jenkins_demo ubuntu@", aws_instance.jenkins_ec2_instance_ip.public_ip)
 }
 

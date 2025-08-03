@@ -6,5 +6,5 @@ cidr_public_subnet   = ["11.0.1.0/24", "11.0.2.0/24"]
 cidr_private_subnet  = ["11.0.3.0/24", "11.0.4.0/24"]
 eu_availability_zone = ["eu-west-1a", "eu-west-1b"]
 
-public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEt8PKGBvJ03UqQxdKAqQbmZ1qIYkwTMYtBCsIZ98FSs smart@smart_sujeeth"
+public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF/YYD/C6ISRjxHc35WZD0YrFPYk5iUKeg+YCSfDcymz smart@smart_sujeeth"
 ec2_ami_id = "ami-01f23391a59163da9"
