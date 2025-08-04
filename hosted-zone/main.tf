@@ -2,8 +2,9 @@ variable "domain_name" {}
 variable "aws_lb_dns_name" {}
 variable "aws_lb_zone_id" {}
 
-data "aws_route53_zone" "dev_proj_1_codewithjoker_online" {
-  name         = "codewithjoker.online"
+
+data "aws_route53_zone" "dev_proj_1_codewithjoker.online" {
+  name         = "codewithjoker_online"
   private_zone = false
 }
 
